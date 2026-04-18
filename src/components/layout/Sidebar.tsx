@@ -33,13 +33,13 @@ export default function Sidebar() {
       className={`relative flex flex-col bg-slate-900 border-r border-slate-700/50 transition-all duration-300 ${sidebarOpen ? "w-60" : "w-16"} shrink-0`}
     >
       <div className={`flex items-center gap-3 px-4 py-5 border-b border-slate-700/50 ${!sidebarOpen && "justify-center px-0"}`}>
-        <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-600 shrink-0">
+        <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#2d6a4f] shrink-0">
           <Shield className="w-5 h-5 text-white" />
         </div>
         {sidebarOpen && (
           <div>
             <p className="text-white font-bold text-sm leading-none">CYPHER</p>
-            <p className="text-blue-400 text-xs mt-0.5">Enterprise AI</p>
+            <p className="text-[#95d5b2] text-xs mt-0.5">Enterprise AI</p>
           </div>
         )}
       </div>
@@ -52,12 +52,12 @@ export default function Sidebar() {
       </button>
 
       {activeCall.call && (
-        <div className={`mx-3 my-3 p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-2 ${!sidebarOpen && "mx-2 justify-center"}`}>
+        <div className={`mx-3 my-3 p-2 rounded-lg bg-[#2d6a4f]/10 border border-[#2d6a4f]/30 flex items-center gap-2 ${!sidebarOpen && "mx-2 justify-center"}`}>
           <span className="relative flex h-2.5 w-2.5 shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#95d5b2] opacity-75" />
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#2d6a4f]" />
           </span>
-          {sidebarOpen && <span className="text-emerald-400 text-xs font-medium truncate">Live Call Active</span>}
+          {sidebarOpen && <span className="text-[#95d5b2] text-xs font-medium truncate">Live Call Active</span>}
         </div>
       )}
 
@@ -70,7 +70,7 @@ export default function Sidebar() {
               onClick={() => navigate(p)}
               className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150 ${
                 active
-                  ? "bg-blue-600 text-white shadow-lg shadow-blue-600/25"
+                  ? "bg-[#2d6a4f] text-white shadow-lg shadow-[#2d6a4f]/25"
                   : "text-slate-400 hover:text-white hover:bg-slate-800"
               } ${!sidebarOpen && "justify-center px-0"}`}
               title={!sidebarOpen ? label : undefined}
@@ -85,7 +85,7 @@ export default function Sidebar() {
       <div className={`border-t border-slate-700/50 p-3 ${!sidebarOpen && "flex justify-center"}`}>
         {sidebarOpen && agent && (
           <div className="flex items-center gap-2 mb-3 px-1">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shrink-0">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#2d6a4f] to-[#40916c] flex items-center justify-center shrink-0">
               <span className="text-white text-xs font-bold">{agent.name.slice(0, 2).toUpperCase()}</span>
             </div>
             <div className="overflow-hidden">

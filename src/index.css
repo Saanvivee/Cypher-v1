@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Green color scheme */
+    --color-primary: 45 106 79; /* #2d6a4f */
+    --color-primary-light: 212 236 219; /* #d4ecdb */
+    --color-primary-dark: 27 67 50; /* #1b4332 */
+    --color-accent: 64 145 108; /* #40916c */
+    --color-accent-light: 149 213 178; /* #95d5b2 */
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -53,6 +62,44 @@
 
   .animate-pulse-slow {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Green theme utilities */
+  .bg-primary {
+    background-color: rgb(var(--color-primary));
+  }
+
+  .bg-primary-light {
+    background-color: rgb(var(--color-primary-light));
+  }
+
+  .bg-primary-dark {
+    background-color: rgb(var(--color-primary-dark));
+  }
+
+  .text-primary {
+    color: rgb(var(--color-primary));
+  }
+
+  .text-primary-light {
+    color: rgb(var(--color-primary-light));
+  }
+
+  .border-primary {
+    border-color: rgb(var(--color-primary));
+  }
+
+  .border-primary-light {
+    border-color: rgb(var(--color-primary-light));
+  }
+
+  /* Gradient utilities */
+  .gradient-primary {
+    background: linear-gradient(135deg, rgb(var(--color-primary-dark)), rgb(var(--color-primary)));
+  }
+
+  .gradient-primary-light {
+    background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-accent)));
   }
 }
 

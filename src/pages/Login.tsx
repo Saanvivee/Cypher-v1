@@ -36,12 +36,12 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-slate-950 flex">
-      <div className="hidden lg:flex flex-col flex-1 bg-gradient-to-br from-slate-900 via-blue-950/30 to-slate-900 relative overflow-hidden">
+      <div className="hidden lg:flex flex-col flex-1 bg-gradient-to-br from-slate-900 via-[#1b4332]/30 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(6)].map((_, i) => (
             <div
               key={i}
-              className="absolute rounded-full opacity-5 bg-blue-500"
+              className="absolute rounded-full opacity-5 bg-[#2d6a4f]"
               style={{
                 width: `${200 + i * 80}px`,
                 height: `${200 + i * 80}px`,
@@ -55,12 +55,12 @@ export default function Login() {
 
         <div className="relative z-10 flex flex-col justify-center h-full px-16">
           <div className="flex items-center gap-3 mb-12">
-            <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-600/40">
+            <div className="w-12 h-12 rounded-2xl bg-[#2d6a4f] flex items-center justify-center shadow-lg shadow-[#2d6a4f]/40">
               <Shield className="w-6 h-6 text-white" />
             </div>
             <div>
               <p className="text-white font-bold text-xl leading-none">CYPHER</p>
-              <p className="text-blue-400 text-sm">Enterprise AI Platform</p>
+              <p className="text-[#95d5b2] text-sm">Enterprise AI Platform</p>
             </div>
           </div>
 
@@ -78,9 +78,9 @@ export default function Login() {
               { icon: Lock, label: "Claim Prioritization", desc: "AI-powered queue" },
               { icon: User, label: "Agent Guidance", desc: "Contextual suggestions" },
             ].map(({ icon: Icon, label, desc }) => (
-              <div key={label} className="flex items-start gap-3 p-4 rounded-xl bg-slate-800/40 border border-slate-700/40">
-                <div className="w-8 h-8 rounded-lg bg-blue-600/20 flex items-center justify-center shrink-0">
-                  <Icon className="w-4 h-4 text-blue-400" />
+              <div key={label} className="flex items-start gap-3 p-4 rounded-xl bg-slate-800/40 border border-[#2d6a4f]/40">
+                <div className="w-8 h-8 rounded-lg bg-[#2d6a4f]/20 flex items-center justify-center shrink-0">
+                  <Icon className="w-4 h-4 text-[#95d5b2]" />
                 </div>
                 <div>
                   <p className="text-white text-sm font-medium">{label}</p>
@@ -94,7 +94,7 @@ export default function Login() {
 
       <div className="flex flex-col justify-center w-full lg:w-[480px] shrink-0 px-8 sm:px-12">
         <div className="lg:hidden flex items-center gap-3 mb-10">
-          <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-[#2d6a4f] flex items-center justify-center">
             <Shield className="w-5 h-5 text-white" />
           </div>
           <p className="text-white font-bold text-lg">CYPHER AI</p>
@@ -117,7 +117,7 @@ export default function Login() {
               value={email}
               onChange={e => setEmail(e.target.value)}
               placeholder="agent@yourcompany.com"
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#2d6a4f] focus:ring-1 focus:ring-[#2d6a4f] transition-colors"
             />
           </div>
           <div>
@@ -128,7 +128,7 @@ export default function Login() {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 pr-12 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 pr-12 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#2d6a4f] focus:ring-1 focus:ring-[#2d6a4f] transition-colors"
               />
               <button
                 type="button"
@@ -143,7 +143,7 @@ export default function Login() {
           <button
             type="submit"
             disabled={submitting || loading}
-            className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-all duration-150 shadow-lg shadow-blue-600/30 mt-2"
+            className="w-full flex items-center justify-center gap-2 bg-[#2d6a4f] hover:bg-[#40916c] disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-all duration-150 shadow-lg shadow-[#2d6a4f]/30 mt-2"
           >
             {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
             Sign In
@@ -159,10 +159,10 @@ export default function Login() {
         <div className="grid grid-cols-2 gap-3">
           <button
             onClick={() => handleDemo("agent")}
-            className="flex flex-col items-center gap-1.5 p-4 rounded-xl bg-slate-800/60 border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-800 transition-all group"
+            className="flex flex-col items-center gap-1.5 p-4 rounded-xl bg-slate-800/60 border border-slate-700/50 hover:border-[#2d6a4f]/50 hover:bg-slate-800 transition-all group"
           >
-            <div className="w-8 h-8 rounded-full bg-blue-600/20 flex items-center justify-center group-hover:bg-blue-600/30 transition-colors">
-              <User className="w-4 h-4 text-blue-400" />
+            <div className="w-8 h-8 rounded-full bg-[#2d6a4f]/20 flex items-center justify-center group-hover:bg-[#2d6a4f]/30 transition-colors">
+              <User className="w-4 h-4 text-[#95d5b2]" />
             </div>
             <p className="text-white text-sm font-semibold">Agent Demo</p>
             <p className="text-slate-500 text-xs">Handle live calls</p>
@@ -170,10 +170,10 @@ export default function Login() {
 
           <button
             onClick={() => handleDemo("supervisor")}
-            className="flex flex-col items-center gap-1.5 p-4 rounded-xl bg-slate-800/60 border border-slate-700/50 hover:border-cyan-500/50 hover:bg-slate-800 transition-all group"
+            className="flex flex-col items-center gap-1.5 p-4 rounded-xl bg-slate-800/60 border border-slate-700/50 hover:border-[#40916c]/50 hover:bg-slate-800 transition-all group"
           >
-            <div className="w-8 h-8 rounded-full bg-cyan-600/20 flex items-center justify-center group-hover:bg-cyan-600/30 transition-colors">
-              <Shield className="w-4 h-4 text-cyan-400" />
+            <div className="w-8 h-8 rounded-full bg-[#40916c]/20 flex items-center justify-center group-hover:bg-[#40916c]/30 transition-colors">
+              <Shield className="w-4 h-4 text-[#95d5b2]" />
             </div>
             <p className="text-white text-sm font-semibold">Supervisor Demo</p>
             <p className="text-slate-500 text-xs">Monitor all agents</p>

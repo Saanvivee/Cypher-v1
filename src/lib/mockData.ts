@@ -112,7 +112,7 @@ export function formatPhone(phone: string): string {
 }
 
 export const STRESS_COLOR_MAP: Record<string, string> = {
-  low: "#10B981",
+  low: "#2d6a4f",
   moderate: "#F59E0B",
   high: "#EF4444",
   critical: "#DC2626",
@@ -126,7 +126,7 @@ export const URGENCY_COLOR_MAP: Record<string, string> = {
 };
 
 export const SENTIMENT_COLOR_MAP: Record<string, string> = {
-  positive: "#10B981",
+  positive: "#2d6a4f",
   neutral: "#6B7280",
   negative: "#F59E0B",
   distressed: "#EF4444",
@@ -164,7 +164,7 @@ export function generateAnalyticsData() {
       { type: "Liability", count: 53 },
     ],
     sentiment_breakdown: [
-      { label: "Positive", count: 412, color: "#10B981" },
+      { label: "Positive", count: 412, color: "#2d6a4f" },
       { label: "Neutral", count: 731, color: "#6B7280" },
       { label: "Negative", count: 486, color: "#F59E0B" },
       { label: "Distressed", count: 218, color: "#EF4444" },

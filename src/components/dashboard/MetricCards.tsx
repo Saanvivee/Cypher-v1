@@ -13,23 +13,23 @@ interface MetricCardProps {
 
 const COLOR_MAP = {
   default: "border-slate-700/50",
-  success: "border-emerald-500/30",
+  success: "border-[#2d6a4f]/30",
   warning: "border-amber-500/30",
   danger: "border-red-500/30",
-  info: "border-blue-500/30",
+  info: "border-[#40916c]/30",
 };
 
 const VALUE_COLOR_MAP = {
   default: "text-white",
-  success: "text-emerald-400",
+  success: "text-[#95d5b2]",
   warning: "text-amber-400",
   danger: "text-red-400",
-  info: "text-blue-400",
+  info: "text-[#95d5b2]",
 };
 
 export function MetricCard({ label, value, sub, trend, trendValue, color = "default", icon }: MetricCardProps) {
   const TrendIcon = trend === "up" ? TrendingUp : trend === "down" ? TrendingDown : Minus;
-  const trendColor = trend === "up" ? "text-emerald-400" : trend === "down" ? "text-red-400" : "text-slate-500";
+  const trendColor = trend === "up" ? "text-[#95d5b2]" : trend === "down" ? "text-red-400" : "text-slate-500";
 
   return (
     <div className={`rounded-xl bg-slate-800/60 border ${COLOR_MAP[color]} p-4 flex flex-col gap-2 hover:bg-slate-800 transition-colors`}>

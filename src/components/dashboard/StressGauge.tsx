@@ -24,7 +24,7 @@ export default function StressGauge({ score, level, label = "Stress Level", size
   const offset = arcLength - (displayScore / 100) * arcLength;
 
   const colorMap: Record<string, { stroke: string; text: string; bg: string; glow: string }> = {
-    low: { stroke: "#10B981", text: "text-emerald-400", bg: "bg-emerald-500/10", glow: "shadow-emerald-500/20" },
+    low: { stroke: "#2d6a4f", text: "text-[#95d5b2]", bg: "bg-[#2d6a4f]/10", glow: "shadow-[#2d6a4f]/20" },
     moderate: { stroke: "#F59E0B", text: "text-amber-400", bg: "bg-amber-500/10", glow: "shadow-amber-500/20" },
     high: { stroke: "#EF4444", text: "text-red-400", bg: "bg-red-500/10", glow: "shadow-red-500/20" },
     critical: { stroke: "#DC2626", text: "text-red-500", bg: "bg-red-500/20", glow: "shadow-red-500/30" },

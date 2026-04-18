@@ -80,6 +80,18 @@ export interface StressMetric {
   timestamp: string;
 }
 
+export interface AudioAnalysisMetrics {
+  pitch: number;
+  intensity: number;
+  jitter: number;
+  speakingRate: number;
+  fillerCount: number;
+  fillerPercentage: number;
+  ambientNoise: number;
+  languageSwitches: number;
+  stressIndicators: string[];
+}
+
 export interface SuggestedQuestion {
   id: string;
   call_id: string;

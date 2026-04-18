@@ -1,4 +1,4 @@
-import { Phone, TrendingUp, CheckCircle, Clock } from "lucide-react";
+import { Phone, TrendingUp, CheckCircle, Clock, Mic } from "lucide-react";
 import { useApp } from "../context/AppContext";
 import { useAuth } from "../context/AuthContext";
 import AppLayout from "../components/layout/AppLayout";
@@ -76,25 +76,25 @@ export default function AgentDashboard() {
 
               <div className="flex-1 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-emerald-500/10 border-2 border-emerald-500/20 flex items-center justify-center mx-auto mb-6 animate-pulse-slow">
-                    <Phone className="w-8 h-8 text-emerald-400" />
+                  <div className="w-20 h-20 rounded-full bg-[#2d6a4f]/10 border-2 border-[#2d6a4f]/20 flex items-center justify-center mx-auto mb-6 animate-pulse-slow">
+                    <Mic className="w-8 h-8 text-[#95d5b2]" />
                   </div>
-                  <h2 className="text-white text-xl font-semibold mb-2">Ready for Calls</h2>
+                  <h2 className="text-white text-xl font-semibold mb-2">Ready for Live Calls</h2>
                   <p className="text-slate-400 text-sm max-w-xs mx-auto">
-                    Your status is set to available. Click "Simulate Incoming Call" above to start a live AI-assisted session.
+                    Your status is set to available. Click "Start Live Call" above to begin real-time voice analysis and transcription.
                   </p>
                   <div className="flex items-center justify-center gap-4 mt-6 text-xs text-slate-500">
                     <span className="flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                      NLP Service Online
+                      <span className="w-2 h-2 rounded-full bg-[#2d6a4f]" />
+                      Speech-to-Text Ready
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                      <span className="w-2 h-2 rounded-full bg-[#2d6a4f]" />
                       Stress Detection Online
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                      Scoring Engine Online
+                      <span className="w-2 h-2 rounded-full bg-[#2d6a4f]" />
+                      AI Questions Ready
                     </span>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ export default function AgentDashboard() {
                   <p className="text-white font-semibold">{call.caller_name}</p>
                   <p className="text-slate-400 text-xs mt-0.5">{call.caller_phone}</p>
                   <div className="mt-3 flex items-center gap-2">
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 capitalize">
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-[#2d6a4f]/20 text-[#95d5b2] border border-[#2d6a4f]/30 capitalize">
                       {call.sentiment}
                     </span>
                     <span className="text-slate-500 text-xs">
@@ -124,12 +124,12 @@ export default function AgentDashboard() {
                       <p className="text-slate-500 text-xs">Urgency</p>
                       <p className={`text-sm font-bold ${
                         call.urgency_score >= 70 ? "text-red-400" :
-                        call.urgency_score >= 45 ? "text-amber-400" : "text-emerald-400"
+                        call.urgency_score >= 45 ? "text-amber-400" : "text-[#95d5b2]"
                       }`}>{Math.round(call.urgency_score)}%</p>
                     </div>
                     <div className="text-center">
                       <p className="text-slate-500 text-xs">Confidence</p>
-                      <p className="text-sm font-bold text-blue-400">{Math.round(call.confidence_score)}%</p>
+                      <p className="text-sm font-bold text-[#95d5b2]">{Math.round(call.confidence_score)}%</p>
                     </div>
                   </div>
                 </div>

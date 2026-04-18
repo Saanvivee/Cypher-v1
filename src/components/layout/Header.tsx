@@ -23,7 +23,7 @@ export default function Header() {
           <span
             className={`font-semibold text-sm ${
               analytics.avg_stress >= 70 ? "text-red-400" :
-              analytics.avg_stress >= 45 ? "text-amber-400" : "text-emerald-400"
+              analytics.avg_stress >= 45 ? "text-amber-400" : "text-[#95d5b2]"
             }`}
           >
             {analytics.avg_stress}%
@@ -34,8 +34,8 @@ export default function Header() {
             <div className="w-px h-4 bg-slate-700" />
             <div className="flex items-center gap-2 text-xs">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#95d5b2] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2d6a4f]" />
               </span>
               <span className="text-slate-300 font-medium">{call.caller_name}</span>
               <span className="text-slate-500">·</span>
@@ -73,7 +73,7 @@ export default function Header() {
         </button>
 
         <div className="flex items-center gap-2 pl-3 border-l border-slate-700">
-          <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+          <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#2d6a4f] to-[#40916c] flex items-center justify-center">
             <span className="text-white text-xs font-bold">
               {(agent?.name ?? "U").slice(0, 2).toUpperCase()}
             </span>
